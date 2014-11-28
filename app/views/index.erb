@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Welcome to Kitly - your number 1 URL Shortener!</h1>
+
+  <form action="/urls" method="post">
+    Your URL: <input type ="text" name="long_url"></br>
+    <input type="submit" value="Submit"></br>
+  </form>
+</div>
+
+
+<table>
+  <%Url.all.each do |u|%>
+  <tr>
+    <td>
+      <a href ="/<%= u.kitly %>">http:kitly/<%=u.kitly%>
+      </a>
+    </td>
+    <td>
+      <%=u.count%>
+    </td>
+        <%end%>
+  </tr>
+</table>
+
+
